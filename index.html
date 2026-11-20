@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>안희준의 연구 소개</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/android-chrome-192x192.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <img src="img/avatar.jpg" alt="안희준 일러스트" class="avatar">
+    <h1 id="msg">안희준의 연구 소개</h1>
+    <p class="tagline">AI 정복하기 프로젝트 0일차</p>
+  </header>
+
+  <p>안녕하세요. 저는 기계공학과 <strong>안희준</strong>입니다. AI 다루기와 컴퓨터게임을 사랑하는 소시민입니다.</p>
+
+  <h2>관심 분야</h2>
+  <div class="interests">
+    <div class="interest-card" onclick="goAI()" style="cursor:pointer;">
+      🤖 AI 다루기<br><small style="font-weight:normal; opacity:0.8;">클릭하면 랜덤 AI로 이동!</small>
+    </div>
+    <div class="interest-card" onclick="goGame()" style="cursor:pointer;">
+      🎮 게임하기<br><small style="font-weight:normal; opacity:0.8;">스팀으로 고고~</small>
+    </div>
+  </div>
+
+  <h2>나에 대한 O/X</h2>
+  <p id="quiz-question">주인장은 고양이보다 강아지를 좋아한다?</p>
+  <button onclick="answerQuiz(true)">O</button>
+  <button onclick="answerQuiz(false)">X</button>
+  <p id="quiz-result" style="font-weight:bold;"></p>
+  <div id="dog-intro" style="display:none; margin-top:12px; text-align:center;">
+    <img src="img/android-chrome-192x192.png" alt="가을이" style="width:120px; height:120px; border-radius:50%; object-fit:cover; border:3px solid #FFD54F;">
+    <p style="margin:8px 0 0; font-weight:500;">이 아이는 제 동생 가을이입니다 🐶</p>
+  </div>
+
+  <h2>미니게임: 반응속도 테스트</h2>
+  <p>버튼을 누르면 색이 바뀝니다. 초록색이 되면 최대한 빨리 클릭하세요!</p>
+  <button id="reaction-btn" onclick="checkReaction()" style="width:180px; height:50px; font-size:16px;">시작!</button>
+  <p id="reaction-result"></p>
+
+  <div class="like-buttons">
+    <button onclick="like()">♥ 좋아요 <span id="num">0</span></button>
+    <button class="super-like" onclick="superLike()">🔥 매우 좋아요 <span id="superNum">0</span></button>
+    <span id="note" style="margin-left: 8px; font-size: 14px;"></span>
+  </div>
+
+  <p>
+    <input id="who" placeholder="방문자 이름">
+    <button onclick="greet()">인사하기</button>
+  </p>
+  <p id="hello"></p>
+  <p>지금 시각: <strong id="clock"></strong></p>
+
+  <footer>© 2026 안희준 자기소개</footer>
+
+  <div class="dark-mode-wrap">
+    <button onclick="toggleDark()">🌙 다크 모드</button>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
